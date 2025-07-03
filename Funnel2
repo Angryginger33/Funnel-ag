@@ -1,0 +1,104 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Top 10 Hooks — AG Advertisement Co.</title>
+  <style>
+    /* Reset & base styles */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: "Open Sans", sans-serif;
+      background: #111;
+      color: #FFF;
+      line-height: 1.6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 16px;
+    }
+    h1 { font-size: 1.8rem; margin-bottom: 8px; }
+    p { margin-bottom: 16px; }
+    ul { margin: 16px 0; padding-left: 20px; }
+    ul li { margin-bottom: 8px; }
+    .container {
+      max-width: 400px;
+      width: 100%;
+      background: #222;
+      padding: 24px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    }
+    .logo { display: block; max-width: 120px; margin: 0 auto 16px; }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    input[type="email"] {
+      padding: 12px;
+      border: none;
+      border-radius: 4px;
+      margin-bottom: 12px;
+      font-size: 1rem;
+    }
+    button {
+      padding: 12px;
+      background: #C2A76F;
+      color: #111;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    button:hover { background: #B1975A; }
+    .footer {
+      margin-top: 24px;
+      font-size: 0.85rem;
+      color: #AAA;
+      text-align: center;
+    }
+    /* Thank-you styles */
+    #thankyou { text-align: center; }
+    #thankyou h1 { color: #C2A76F; }
+    .cta {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 12px 24px;
+      background: #5A3E2B;
+      color: #FFF;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+    .cta:hover { background: #472F22; }
+  </style>
+</head>
+<body>
+  <div id="landing" class="container">
+    <img src="logo.png" alt="AG Advertisement Co. Logo" class="logo" />
+    <h1>Want more customers from your posts?</h1>
+    <p>Get <strong>10 plug-and-play hooks</strong> that make people stop scrolling—even if you’ve never written an ad before.</p>
+    <ul>
+      <li>10 proven ad openers to hook viewers fast</li>
+      <li>Ready to copy & paste into videos or captions</li>
+      <li>Includes 3 real examples from local businesses</li>
+    </ul>
+    <form id="leadForm">
+      <input type="email" id="email" name="email" placeholder="Your email address" required />
+      <button type="submit">Get My Free Hooks →</button>
+    </form>
+    <p class="footer">Brought to you by AG Advertisement Co.<br />Studio-quality ads, small-town prices.</p>
+  </div>  <div id="thankyou" class="container" style="display:none;">
+    <h1>🎉 You’re In!</h1>
+    <p>Your hooks are on the way to your inbox.</p>
+    <p>Want us to build your next ad for you? Check out our <strong>Starter Ad Kit</strong>—branded image + 15-sec video for just <strong>$97</strong>.</p>
+    <a href="#" class="cta">See Starter Kit →</a>
+  </div>  <script>
+    document.getElementById('leadForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      // TODO: Integrate with your email provider via AJAX or form action
+      document.getElementById('landing').style.display = 'none';
+      document.getElementById('thankyou').style.display = 'block';
+    });
+  </script></body>
+</html>
